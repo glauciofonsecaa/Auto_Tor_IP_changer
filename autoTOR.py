@@ -40,12 +40,12 @@ except subprocess.CalledProcessError:
 os.system("clear")
 def ma_ip():
     url='https://www.myexternalip.com/raw'
-    get_ip= requests.get(url,proxies=dict(http='socks5://127.0.0.1:9050',https='socks5://127.0.0.1:9050'))
+    get_ip = requests.get(url,proxies=dict(http='socks5://127.0.0.1:9050', https='socks5://127.0.0.1:9050'))
     return get_ip.text
 
 def change():
     os.system("service tor reload")
-    print ('[+] Your IP has been Changed to : '+str(ma_ip()))
+    print ('[+] Your IP has been Changed to :' + str(ma_ip()))
 
 print('''\033[1;32;40m \n
                 _          _______
@@ -77,7 +77,7 @@ if int(lin) == int(0):
 			change()
 		except KeyboardInterrupt:
 
-		 	print('\nauto tor is closed ')
+		 	print('\n auto tor is closed')
 		 	quit()
 
 else:
